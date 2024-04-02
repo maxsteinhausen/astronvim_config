@@ -36,8 +36,8 @@ return {
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
-        mapleader = " ", -- sets vim.g.mapleader
-        maplocalleader = ",", -- set , as local leader in e.g. R and python
+        -- mapleader = " ", -- sets vim.g.mapleader
+        -- maplocalleader = ",", -- set , as local leader in e.g. R and python
         -- NOTE: `mapleader` and `maplocalleader` must be set in the AstroNvim opts or before `lazy.setup`
         -- This can be found in the `lua/lazy_setup.lua` file
         virtcolumn_char = "▕", -- char to display the line
