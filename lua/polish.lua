@@ -22,6 +22,7 @@ vim.cmd "nmap <enter> <Plug>RDSendLine"
 vim.cmd "let R_rconsole_width = 0"
 vim.cmd "let cmdline_vsplit = 0"
 vim.cmd "let cmdline_term_width = 150"
+vim.cmd "let R_assign = 2"
 vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
 vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
 
