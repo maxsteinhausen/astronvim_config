@@ -61,14 +61,6 @@ return {
     config = true,
     cmd = "Glow",
   }, -- local.leader + m
-  { "untitled-ai/jupyter_ascending.vim" },
-  {
-    "luk400/vim-jukit",
-    keys = { "<leader>j", desc = "Jupyter notebooks in nvim (needs ip_kitty)" },
-    -- config = true,
-    -- event = "VeryLazy",
-    cmd = "Jukit",
-  }, -- leader + os, np, <space>, <enter> to send line
   -- { "github/copilot.vim" },                                      -- needs a licence is not open source
   { "edluffy/hologram.nvim", event = "VeryLazy", cmd = "Holo" }, -- could not get it to work
   { "aca/marp.nvim", event = "VeryLazy", cmd = "Marp" }, -- Marp for markdown slides
