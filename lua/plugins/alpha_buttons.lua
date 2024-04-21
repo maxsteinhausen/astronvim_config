@@ -11,7 +11,7 @@ return {
       opts.button("LDR f '", "  Bookmarks  "),
       opts.button("LDR f a", "  Config files  "),
       opts.button("LDR S l", "  Last Session  "),
-      opts.button("LDR p a", "  Update Plugins"),
+      opts.button("LDR p a", "  Update AstroNvim  "),
       opts.button("LDR q", "  Quit"),
     }
   end,
