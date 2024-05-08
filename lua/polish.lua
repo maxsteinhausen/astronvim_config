@@ -3,17 +3,17 @@
 -- fit in the normal config locations above can go here
 
 -- Set up custom filetypes
-vim.filetype.add {
-  extension = {
-    foo = "fooscript",
-  },
-  filename = {
-    ["Foofile"] = "fooscript",
-  },
-  pattern = {
-    ["~/%.config/foo/.*"] = "fooscript",
-  },
-}
+-- vim.filetype.add {
+--   extension = {
+--     foo = "fooscript",
+--   },
+--   filename = {
+--     ["Foofile"] = "fooscript",
+--   },
+--   pattern = {
+--     ["~/%.config/foo/.*"] = "fooscript",
+--   },
+-- }
 
 -- Set key binding
 -- R settings
@@ -26,6 +26,8 @@ vim.cmd "let R_assign = 2"
 vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
 vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
 
-vim.cmd "set shell=zsh"
-
-vim.cmd "set cc=80"
+-- vim options
+-- vim.cmd "set shell=zsh"
+-- vim.o.colorcolumn = "80"
+-- vim.opt.spelllang = "en_GB, de_DE"
+-- vim.opt.spell = true

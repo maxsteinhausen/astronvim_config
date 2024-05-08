@@ -19,7 +19,7 @@ return {
     },
     -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
     diagnostics = {
-      virtual_text = true,
+      virtual_text = false,
       underline = true,
     },
     -- vim options can be configured here
@@ -27,12 +27,14 @@ return {
       opt = { -- vim.opt.<key>
         relativenumber = true, -- sets vim.opt.relativenumber
         number = true, -- sets vim.opt.number
-        spell = false, -- sets vim.opt.spell
+        spell = true, -- sets vim.opt.spell
+        spelllang = { "en_gb", "de_de" },
         signcolumn = "auto", -- sets vim.opt.signcolumn to auto
         wrap = false, -- sets vim.opt.wrap
         textwidth = 80,
+        colorcolumn = "80",
         scrolloff = 3,
-        spelllang = { "en", "de" },
+        shell = "zsh",
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
