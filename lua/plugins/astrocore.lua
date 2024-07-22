@@ -19,7 +19,7 @@ return {
     },
     -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
     diagnostics = {
-      virtual_text = false,
+      virtual_text = true,
       underline = true,
     },
     -- vim options can be configured here
@@ -28,7 +28,7 @@ return {
         relativenumber = true, -- sets vim.opt.relativenumber
         number = true, -- sets vim.opt.number
         spell = true, -- sets vim.opt.spell
-        spelllang = { "en_gb", "de_de" },
+        spelllang = { "en", "de" },
         signcolumn = "auto", -- sets vim.opt.signcolumn to auto
         wrap = false, -- sets vim.opt.wrap
         textwidth = 80,
