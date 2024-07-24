@@ -28,10 +28,10 @@ return {
       vim.g.slime_target = "neovim"
       vim.g.slime_python_ipython = 1
 
-      require("which-key").register {
-        ["<leader>cm"] = { mark_terminal, "mark terminal" },
-        ["<leader>cs"] = { set_terminal, "set terminal" },
-      }
+      -- require("which-key").register {
+      --   ["<leader>cm"] = { mark_terminal, "mark terminal" },
+      --   ["<leader>cs"] = { set_terminal, "set terminal" },
+      -- }
     end,
   },
 }
