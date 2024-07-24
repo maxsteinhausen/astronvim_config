@@ -9,6 +9,12 @@ return {
     opts = {
       ensure_installed = {
         "lua_ls",
+        "pyright",
+        "ruff",
+        "r_language_server",
+        "marksman",
+        "bashls",
+        "sqlls",
         -- add more arguments for adding more language servers
       },
     },
@@ -20,6 +26,11 @@ return {
     opts = {
       ensure_installed = {
         "stylua",
+        "markdownlint",
+        "sqlfluff",
+        "jupytext",
+        "beautysh",
+        "sql-formatter",
         -- add more arguments for adding more null-ls sources
       },
     },
