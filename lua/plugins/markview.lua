@@ -9,7 +9,7 @@ return {
       "nvim-tree/nvim-web-devicons",
     },
     keys = {
-      { "<leader>m", "<cmd>Markview splitToggle<cr>" },
+      { "<leader>m", "<cmd>Markview splitToggle<cr>", desc = "Toggle markview split" },
     },
   },
 }

@@ -74,10 +74,8 @@ return {
         -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
         -- second key is the lefthand side of the map
         ["<C-s>"] = { ":w!<cr>", desc = "save File" },
-        ["<C-d>"] = { ":wq<cr>", desc = "control+d for save and close" },
+        ["<C-x>"] = { ":wq<cr>", desc = "control+d for save and close" },
         ["<F5>"] = { ":setlocal spell!<cr>", desc = "toggle spellcheck" },
-        ["<Leader>m"] = { ":Glow<cr>", desc = "markdown preview buffer" },
-        ["<Leader>v"] = { ":Vista<cr>", desc = "python tags" },
         ["<Leader>x"] = { ":JupyterExecute<cr>", desc = "Execute the current line Jupyter" },
         ["<Leader>X"] = { ":JupyterExecuteAll<cr>", desc = "Execute all Jupyter" },
         -- mappings seen under group name "Buffer"
