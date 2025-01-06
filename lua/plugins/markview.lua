@@ -8,5 +8,8 @@ return {
       "nvim-treesitter/nvim-treesitter",
       "nvim-tree/nvim-web-devicons",
     },
+    keys = {
+      { "<leader>m", "<cmd>Markview splitToggle<cr>" },
+    },
   },
 }

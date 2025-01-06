@@ -1,116 +1,87 @@
 ---@type LazySpec
 return {
   "goolord/alpha-nvim",
-  opts = function(_, opts)
-    -- customize the dashboard header
-    -- local logo = {
-    --   " █████  ███████ ████████ ██████   ██████",
-    --   "██   ██ ██         ██    ██   ██ ██    ██",
-    --   "███████ ███████    ██    ██████  ██    ██",
-    --   "██   ██      ██    ██    ██   ██ ██    ██",
-    --   "██   ██ ███████    ██    ██   ██  ██████",
-    --   " ",
-    --   "    ███    ██ ██    ██ ██ ███    ███",
-    --   "    ████   ██ ██    ██ ██ ████  ████",
-    --   "    ██ ██  ██ ██    ██ ██ ██ ████ ██",
-    --   "    ██  ██ ██  ██  ██  ██ ██  ██  ██",
-    --   "    ██   ████   ████   ██ ██      ██",
-    -- }
-    local logo = {
-      [[ ███       ███ ]],
-      [[█████      ████]],
-      [[██████     █████]],
-      [[███████    █████]],
-      [[████████   █████]],
-      [[█████████  █████]],
-      [[█████ ████ █████]],
-      [[█████  █████████]],
-      [[█████   ████████]],
-      [[█████    ███████]],
-      [[█████     ██████]],
-      [[████      █████]],
-      [[ ███       ███ ]],
-      [[                  ]],
-      [[ N  E  O  V  I  M ]],
-    }
-    opts.section.header.val = logo
-    -- no Idea how it works exaclty, try n error with distinguishable colors lol
-    -- opts.section.header.opts.hl = {
-    --   {
-    --     { "AlphaNeovimLogoBlue", 0, 0 },
-    --     { "AlphaNeovimLogoGreen", 1, 14 },
-    --     { "AlphaNeovimLogoBlue", 23, 34 },
-    --   },
-    --   {
-    --     { "AlphaNeovimLogoBlue", 0, 2 },
-    --     { "AlphaNeovimLogoGreenFBlueB", 2, 4 },
-    --     { "AlphaNeovimLogoGreen", 4, 19 },
-    --     { "AlphaNeovimLogoBlue", 27, 40 },
-    --   },
-    --   {
-    --     { "AlphaNeovimLogoBlue", 0, 4 },
-    --     { "AlphaNeovimLogoGreenFBlueB", 4, 7 },
-    --     { "AlphaNeovimLogoGreen", 7, 22 },
-    --     { "AlphaNeovimLogoBlue", 29, 42 },
-    --   },
-    --   {
-    --     { "AlphaNeovimLogoBlue", 0, 8 },
-    --     { "AlphaNeovimLogoGreenFBlueB", 8, 10 },
-    --     { "AlphaNeovimLogoGreen", 10, 25 },
-    --     { "AlphaNeovimLogoBlue", 31, 44 },
-    --   },
-    --   {
-    --     { "AlphaNeovimLogoBlue", 0, 10 },
-    --     { "AlphaNeovimLogoGreenFBlueB", 10, 13 },
-    --     { "AlphaNeovimLogoGreen", 13, 28 },
-    --     { "AlphaNeovimLogoBlue", 33, 46 },
-    --   },
-    --   {
-    --     { "AlphaNeovimLogoBlue", 0, 13 },
-    --     { "AlphaNeovimLogoGreen", 14, 31 },
-    --     { "AlphaNeovimLogoBlue", 35, 49 },
-    --   },
-    --   {
-    --     { "AlphaNeovimLogoBlue", 0, 13 },
-    --     { "AlphaNeovimLogoGreen", 16, 32 },
-    --     { "AlphaNeovimLogoBlue", 35, 49 },
-    --   },
-    --   {
-    --     { "AlphaNeovimLogoBlue", 0, 13 },
-    --     { "AlphaNeovimLogoGreen", 17, 33 },
-    --     { "AlphaNeovimLogoBlue", 35, 49 },
-    --   },
-    --   {
-    --     { "AlphaNeovimLogoBlue", 0, 13 },
-    --     { "AlphaNeovimLogoGreen", 18, 34 },
-    --     { "AlphaNeovimLogoGreenFBlueB", 33, 35 },
-    --     { "AlphaNeovimLogoBlue", 35, 49 },
-    --   },
-    --   {
-    --     { "AlphaNeovimLogoBlue", 0, 13 },
-    --     { "AlphaNeovimLogoGreen", 19, 35 },
-    --     { "AlphaNeovimLogoGreenFBlueB", 34, 35 },
-    --     { "AlphaNeovimLogoBlue", 35, 49 },
-    --   },
-    --   {
-    --     { "AlphaNeovimLogoBlue", 0, 13 },
-    --     { "AlphaNeovimLogoGreen", 20, 36 },
-    --     { "AlphaNeovimLogoGreenFBlueB", 35, 37 },
-    --     { "AlphaNeovimLogoBlue", 37, 49 },
-    --   },
-    --   {
-    --     { "AlphaNeovimLogoBlue", 0, 13 },
-    --     { "AlphaNeovimLogoGreen", 21, 37 },
-    --     { "AlphaNeovimLogoGreenFBlueB", 36, 37 },
-    --     { "AlphaNeovimLogoBlue", 37, 49 },
-    --   },
-    --   {
-    --     { "AlphaNeovimLogoBlue", 1, 13 },
-    --     { "AlphaNeovimLogoGreen", 20, 35 },
-    --     { "AlphaNeovimLogoBlue", 37, 48 },
-    --   },
-    --   {},
-    --   { { "AlphaNeovimLogoGreen", 0, 9 }, { "AlphaNeovimLogoBlue", 9, 18 } },
-    -- }
+  dependencies = {
+    "nvim-tree/nvim-web-devicons",
+    "nvim-lua/plenary.nvim",
+  },
+  config = function()
+    local dashboard = require "alpha.themes.dashboard"
+
+    -- helper function for utf8 chars
+    local function getCharLen(s, pos)
+      local byte = string.byte(s, pos)
+      if not byte then return nil end
+      return (byte < 0x80 and 1) or (byte < 0xE0 and 2) or (byte < 0xF0 and 3) or (byte < 0xF8 and 4) or 1
+    end
+
+    local function applyColors(logo, colors, logoColors)
+      dashboard.section.header.val = logo
+
+      for key, color in pairs(colors) do
+        local name = "Alpha" .. key
+        vim.api.nvim_set_hl(0, name, color)
+        colors[key] = name
+      end
+
+      dashboard.section.header.opts.hl = {}
+      for i, line in ipairs(logoColors) do
+        local highlights = {}
+        local pos = 0
+
+        for j = 1, #line do
+          local opos = pos
+          pos = pos + getCharLen(logo[i], opos + 1)
+
+          local color_name = colors[line:sub(j, j)]
+          if color_name then table.insert(highlights, { color_name, opos, pos }) end
+        end
+
+        table.insert(dashboard.section.header.opts.hl, highlights)
+      end
+      return dashboard.opts
+    end
+
+    require("alpha").setup(applyColors({
+      [[  ███       ███  ]],
+      [[  ████      ████ ]],
+      [[  ████     █████ ]],
+      [[ █ ████    █████ ]],
+      [[ ██ ████   █████ ]],
+      [[ ███ ████  █████ ]],
+      [[ ████ ████ ████ ]],
+      [[ █████  ████████ ]],
+      [[ █████   ███████ ]],
+      [[ █████    ██████ ]],
+      [[ █████     █████ ]],
+      [[ ████      ████ ]],
+      [[  ███       ███  ]],
+      [[                    ]],
+      [[  N  E  O  V  I  M  ]],
+    }, {
+      ["b"] = { fg = "#3399ff", ctermfg = 33 },
+      ["a"] = { fg = "#53C670", ctermfg = 35 },
+      ["g"] = { fg = "#39ac56", ctermfg = 29 },
+      ["h"] = { fg = "#33994d", ctermfg = 23 },
+      ["i"] = { fg = "#33994d", bg = "#39ac56", ctermfg = 23, ctermbg = 29 },
+      ["j"] = { fg = "#53C670", bg = "#33994d", ctermfg = 35, ctermbg = 23 },
+      ["k"] = { fg = "#30A572", ctermfg = 36 },
+    }, {
+      [[  kkkka       gggg  ]],
+      [[  kkkkaa      ggggg ]],
+      [[ b kkkaaa     ggggg ]],
+      [[ bb kkaaaa    ggggg ]],
+      [[ bbb kaaaaa   ggggg ]],
+      [[ bbbb aaaaaa  ggggg ]],
+      [[ bbbbb aaaaaa igggg ]],
+      [[ bbbbb  aaaaaahiggg ]],
+      [[ bbbbb   aaaaajhigg ]],
+      [[ bbbbb    aaaaajhig ]],
+      [[ bbbbb     aaaaajhi ]],
+      [[ bbbbb      aaaaajh ]],
+      [[  bbbb       aaaaa  ]],
+      [[                    ]],
+      [[  a  a  a  b  b  b  ]],
+    }))
   end,
 }
