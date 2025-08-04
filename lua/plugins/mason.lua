@@ -29,7 +29,7 @@ return {
     opts = {
       ensure_installed = {
         "stylua",
-	"markdownlint",
+        "markdownlint",
         "sqlfluff",
         "jupytext",
         "beautysh",

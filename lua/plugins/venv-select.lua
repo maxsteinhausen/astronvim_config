@@ -9,7 +9,13 @@ return {
     },
     lazy = false,
     branch = "regexp", -- This is the regexp branch, use this for the new version
-    config = function() require("venv-selector").setup() end,
+    config = function()
+      require("venv-selector").setup {
+        name = ".venv",
+        auto_refresh = true,
+        dap_enabled = true,
+      }
+    end,
     keys = {
       { "<leader>pv", "<cmd>VenvSelect<cr>", desc = "Select virtual environment for Python" },
     },
